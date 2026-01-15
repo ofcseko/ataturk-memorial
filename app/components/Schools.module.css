@@ -1,0 +1,80 @@
+.schoolsSection {
+    padding: 4rem 20px;
+    background-color: rgba(240, 238, 230, 0.85);
+    /* Semi-transparent cream */
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.schoolName {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+}
+
+.period {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.details {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease;
+}
+
+.details.show {
+    max-height: 200px;
+    /* Arbitrary limit */
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+.location {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.arrow {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--accent);
+}
